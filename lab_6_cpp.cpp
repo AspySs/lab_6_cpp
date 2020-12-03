@@ -52,7 +52,7 @@ std::string open_file(const std::string& path)
 	return str;
 }
 bool is_term(std::string str) {
-	if (is_multiplier(str) || (is_multiplier(str.erase(0,str.find('*'))) && is_term(str.erase( str.find('*'), str.size())))) {
+	if (is_multiplier(str) || (is_multiplier(str.erase(0,str.find('*'))) && is_term(str.erase( str.find('*'), str.size()))) || (is_multiplier(str.erase(0, str.find('+'))) && is_term(str.erase(str.find('+'), str.size())))) {
 
 	}
 
