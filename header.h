@@ -15,6 +15,9 @@ public:
 		return s_error.c_str();
 	}
 };
+bool have_mult_star(std::string str);
+bool have_plus(std::string str);
+bool have_minus(std::string str);
 bool is_bracket(const char ch);
 
 bool is_expression(std::string str);
