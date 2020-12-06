@@ -3,22 +3,22 @@
 #define HEADER_H
 #include <iostream>
 
-class exception_file{
-
-private:
-	const std::string s_error = "Считаны все строки";
+class exception_file {
 public:
-	exception_file(){
+	exception_file() {
 
-	}
-	const char* getError(){
-		return s_error.c_str();
 	}
 };
-bool have_mult_star(std::string str);
-bool have_plus(std::string str);
-bool have_minus(std::string str);
-bool is_bracket(const char ch);
+
+bool have_mult_star(std::string str); // проверка на наличие *
+
+bool have_plus(std::string str); // проверка на наличие +
+
+bool have_minus(std::string str); // проверка на наличие -
+
+bool in_bracket(std::string str); // проверка на наличие ()
+
+std::string out_of_brackets(std::string str); // извлечение из ()
 
 bool is_expression(std::string str);
 
@@ -35,8 +35,6 @@ bool is_unsign_int(std::string str);
 void skip_al_readed(std::ifstream& in, int n);
 
 std::string open_file(const std::string& path);
-
-bool isInteger(std::string str);
 
 bool is_digit(const char ch);
 
