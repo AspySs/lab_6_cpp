@@ -6,7 +6,7 @@
 class exception_file {
 public:
 	exception_file() {
-
+		std::cout << "\n Конец файла либо встречена пустая строка \n";
 	}
 };
 
